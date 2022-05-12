@@ -2,7 +2,7 @@
 
 # Coffee list
 
-<!-- Ссылка на приложение - [https://baranovstas.github.io/alfa-cards/](https://baranovstas.github.io/alfa-cards/) -->
+Ссылка на приложение - [https://baranovstas.github.io/coffee-list/](https://baranovstas.github.io/coffee-list/)
 
 ## О проекте
 
