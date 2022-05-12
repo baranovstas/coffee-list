@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-# Alfa cards
+# Coffee list
 
 <!-- Ссылка на приложение - [https://baranovstas.github.io/alfa-cards/](https://baranovstas.github.io/alfa-cards/) -->
 
