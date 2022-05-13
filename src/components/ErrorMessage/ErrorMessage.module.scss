@@ -20,15 +20,10 @@
 
 @media only screen and (max-width: 576px) {
   .img {
-    margin-bottom: 20px;
     width: 200px;
     height: 200px;
   }
   .error {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
     font-size: 14px;
     line-height: 14px;
   }

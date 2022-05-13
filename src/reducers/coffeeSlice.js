@@ -17,7 +17,7 @@ const fetchCoffeeData = createAsyncThunk(
   }
 )
 
-const cardsSlice = createSlice({
+const coffeeSlice = createSlice({
   name: 'coffee',
 
   initialState: {
@@ -44,7 +44,7 @@ const cardsSlice = createSlice({
   }
 });
 
-const { reducer } = cardsSlice;
+const { reducer } = coffeeSlice;
 
 export default reducer;
 export { fetchCoffeeData };
