@@ -4,7 +4,7 @@ import CoffeeItem from '../components/CoffeeItem/CoffeeItem';
 function CoffeeItemContainer({ origin, notes, ...props }) {
   // подготовка данных для вывода на странице блоков с названием кофе и его тегами
   const coffeInfoItemsData = [
-    { infoCaption: 'Название:', infoText: origin },
+    { infoCaption: 'Происхождение:', infoText: origin },
     { infoCaption: 'Теги:', infoText: notes }
   ];
   
