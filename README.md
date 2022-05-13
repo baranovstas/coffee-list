@@ -26,7 +26,7 @@
 
 1. Скачайте архивом или клонируйте репозиторий
    ```sh
-   git clone https://github.com/baranovstas/alfa-cards.git
+   git clone https://github.com/baranovstas/coffee-list.git
    ```
 2. Откройте терминал и введите следующую команду, чтобы установить все нужные зависимости в проект
    ```sh

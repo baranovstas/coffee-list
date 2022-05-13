@@ -14,16 +14,14 @@ function CoffeeListContainer() {
 
   const content = useSelector(state => selectCoffee(state));
 
-  // const coffeeData = useSelector(
-  //   ({ coffee: { coffeeData } }) => isFetched
-  // );
-
   useEffect(() => {
     dispatch(fetchCoffeeData());
   }, [dispatch]);
 
   if (!content) return <Spinner />;
-  // if (coffeeData.length === 0) return <Notification />;;
+  if (content && content.length === 0) {
+    return <Notification text='Список кофе пуст' />;
+  }
 
   return <Grid container spacing={2.5}>{content}</Grid>;
   // return <CoffeeList coffee={content} />;
