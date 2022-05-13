@@ -19,12 +19,7 @@ function CoffeeItemContainer({ origin, notes, ...props }) {
     }
   );
 
-  return (
-    <CoffeeItem
-      infoItems={coffeInfoItems}
-      {...props}
-    />
-  );
+  return <CoffeeItem infoItems={coffeInfoItems} {...props} />;
 }
 
 export default CoffeeItemContainer;

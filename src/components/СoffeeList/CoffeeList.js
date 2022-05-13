@@ -1,7 +1,7 @@
-import coffeeListStyles from './CoffeeList.module.scss';
+import { Grid } from '@mui/material';
 
-const CardsList = ({ coffee }) => (
-  <ul className={coffeeListStyles.list}>{coffee}</ul>
+const CoffeeList = ({ coffeeItems }) => (
+  <Grid container spacing={1.5}>{coffeeItems}</Grid>
 );
 
-export default CardsList;
+export default CoffeeList;

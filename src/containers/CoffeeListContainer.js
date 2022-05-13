@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Grid } from '@mui/material';
 import Spinner from '../components/Spinner/Spinner';
 import CoffeeList from '../components/СoffeeList/CoffeeList';
 import Notification from '../components/Notification/Notification';
@@ -20,13 +19,12 @@ function CoffeeListContainer() {
     dispatch(fetchCoffeeData());
   }, [dispatch]);
 
-  if (!coffeeList) return <Spinner />;
-  if (coffeeList && coffeeList.length === 0) {
+  if (!coffeeList) return <Spinner />
+  else if (coffeeList.length === 0) {
     return <Notification text='Список кофе пуст' />;
   }
 
-  // return <Grid container spacing={2.5}>{coffeeList}</Grid>;
-  return <CoffeeList coffee={coffeeList} />;
+  return <CoffeeList coffeeItems={coffeeList} />;
 }
 
 export default CoffeeListContainer;
