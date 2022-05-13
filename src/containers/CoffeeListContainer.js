@@ -19,6 +19,7 @@ function CoffeeListContainer() {
     dispatch(fetchCoffeeData());
   }, [dispatch]);
 
+  // следующие условия нужны для оповещения пользователя о текущем состоянии списка кофе - либо ответ еще загружается либо пришел пустой результат (пустой массив)
   if (!coffeeList) return <Spinner />
   else if (coffeeList.length === 0) {
     return <Notification text='Список кофе пуст' />;
