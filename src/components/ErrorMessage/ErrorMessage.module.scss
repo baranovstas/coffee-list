@@ -1,11 +1,35 @@
-.wrapper {
+@import "../../assets/styles/_vars.scss";
+
+.error {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
+  font-family: $fontMontserrat;
+  color: $wht;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
 }
 
 .img {
   margin-bottom: 20px;
   width: 250px;
   height: 250px;
+}
+
+@media only screen and (max-width: 576px) {
+  .img {
+    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+  }
+  .error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 14px;
+  }
 }

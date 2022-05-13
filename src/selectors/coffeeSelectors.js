@@ -1,6 +1,6 @@
 import { createSelector } from '@reduxjs/toolkit';
 
-import CoffeeItem from '../components/CoffeeItem/CoffeeItem';
+import CoffeeItemContainer from '../containers/CoffeeItemContainer';
 
 function selectCoffeeData({ coffee: { coffeeData } }) {
   return coffeeData;
@@ -10,7 +10,7 @@ function selectIsFetched({ coffee: { isFetched } }) {
   return isFetched;
 }
 
-const selectCoffee = createSelector(
+const selectCoffeeList = createSelector(
   selectCoffeeData,
   selectIsFetched,
   (coffeeData, isFetched) => {
@@ -18,8 +18,8 @@ const selectCoffee = createSelector(
       return coffeeData.map(
         function ({ blend_name, id, origin, notes }) {
           return (
-            <CoffeeItem
-              name={blend_name}
+            <CoffeeItemContainer
+              title={blend_name}
               origin={origin}
               notes={notes}
               key={id}
@@ -31,4 +31,4 @@ const selectCoffee = createSelector(
   }
 );
 
-export { selectCoffee };
+export { selectCoffeeList };

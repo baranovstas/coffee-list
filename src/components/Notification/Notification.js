@@ -1,8 +1,8 @@
+import notificationStyles from './Notification.module.scss';
+
 function Notification({ text }) {
   return (
-    <p style={{ textAlign: 'center' }}>
-      {text}
-    </p>
+    <p className={notificationStyles.notification}>{text}</p>
   );
 }
 

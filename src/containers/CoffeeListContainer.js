@@ -7,24 +7,26 @@ import CoffeeList from '../components/СoffeeList/CoffeeList';
 import Notification from '../components/Notification/Notification';
 
 import { fetchCoffeeData } from '../reducers/coffeeSlice';
-import { selectCoffee } from '../selectors/coffeeSelectors';
+import { selectCoffeeList } from '../selectors/coffeeSelectors';
 
 function CoffeeListContainer() {
   const dispatch = useDispatch();
 
-  const content = useSelector(state => selectCoffee(state));
+  const coffeeList = useSelector(
+    state => selectCoffeeList(state)
+  );
 
   useEffect(() => {
     dispatch(fetchCoffeeData());
   }, [dispatch]);
 
-  if (!content) return <Spinner />;
-  if (content && content.length === 0) {
+  if (!coffeeList) return <Spinner />;
+  if (coffeeList && coffeeList.length === 0) {
     return <Notification text='Список кофе пуст' />;
   }
 
-  return <Grid container spacing={2.5}>{content}</Grid>;
-  // return <CoffeeList coffee={content} />;
+  // return <Grid container spacing={2.5}>{coffeeList}</Grid>;
+  return <CoffeeList coffee={coffeeList} />;
 }
 
 export default CoffeeListContainer;

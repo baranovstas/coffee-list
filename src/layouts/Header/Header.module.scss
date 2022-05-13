@@ -6,7 +6,21 @@
 
 .title {
   text-align: center;
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 38px;
+  line-height: 38px;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .title {
+    font-size: 26px;
+    line-height: 26px;
+  }
 }

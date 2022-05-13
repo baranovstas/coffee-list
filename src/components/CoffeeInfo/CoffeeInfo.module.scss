@@ -1,0 +1,12 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.caption {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
