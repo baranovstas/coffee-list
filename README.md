@@ -16,6 +16,7 @@
 
 - React
 - Redux
+- JavaScript
 - React-Redux
 - Redux Toolkit
 - Axios

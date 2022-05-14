@@ -7,9 +7,10 @@ const fetchCoffeeData = createAsyncThunk(
   'coffee/fetchCoffeeData',
   async (_, { rejectWithValue }) => {
     try {
-      const { data } = await axios.get(
+      const { data, status } = await axios.get(
         'https://random-data-api.com/api/coffee/random_coffee?size=20'
       );
+      if (status >= 400) throw new Error('Ошибка');
       return data;
     } catch ({ message }) {
       return rejectWithValue(message);
